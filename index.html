@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laptopok - Céges oldal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>LaptopMania</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Kezdőlap</a></li>
+          <li><a href="#products">Készülékek</a></li>
+          <li><a href="#contact">Kapcsolat</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home">
+        <h2>Rólunk</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget
+          augue ut justo fermentum.
+        </p>
+      </section>
+
+      <section id="products">
+        <div class="api-controls">
+          <button onclick="fetchAllLaptops()">Összes készülék</button>
+          <input type="number" id="idInput" placeholder="Laptop ID" />
+          <button onclick="fetchLaptopById()">Keresés ID alapján</button>
+          <input
+            type="text"
+            id="manufacturerInput"
+            placeholder="Gyártó (pl. Asus)"
+          />
+          <button onclick="fetchByManufacturer()">Gyártó szerint</button>
+        </div>
+
+        <div id="results" class="product-grid"></div>
+      </section>
+
+      <section id="contact">
+        <h2>Kapcsolat</h2>
+        <p>Email: info@laptopmania.hu<br />Telefon: +36 30 123 4567</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 LaptopMania</p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
